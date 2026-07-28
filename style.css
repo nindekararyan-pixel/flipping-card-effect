@@ -1,23 +1,23 @@
 :root {
+   
     --bg: #0e0e14;
     --panel: #1a1a24;
     --panel-2: #14141c;
     --border: #2c2c3c;
     --text: #e4e2ee;
-    --muted:#6c7086;
+    --muted: #6c7086;
     --keyword: #c792ea;
     --string: #89ca78;
     --accent: #82d4c9;
     --pink: #f07178;
-    --font-mono: 'SFMono-Regular ', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
-}
-
-*{ box-sizing: border-box;}
-
-
-html,body{
-    margin: 0;
-    min-width: 100vh;
+    --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  }
+ 
+  *{ box-sizing:border-box; }
+ 
+  html,body{
+    margin:0;
+    min-height:100vh;
     background:
       radial-gradient(circle at 20% 10%, rgba(130,212,201,0.08), transparent 40%),
       radial-gradient(circle at 80% 90%, rgba(199,146,234,0.08), transparent 40%),
@@ -26,39 +26,36 @@ html,body{
     font-family: var(--font-mono);
     padding: 60px 20px;
   }
-
+ 
   @media (prefers-reduced-motion: reduce){
-    *{ animation-duration: 0.001ms!important; transition-duration: 0.001ms !important;}
+    *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
   }
-
+ 
   .header{
     max-width: 960px;
     margin: 0 auto 48px auto;
-    text-align: center;
+    text-align:center;
   }
-
-  .header .comment{ color: var(--muted); font-size: 13px; letter-spacing: .3px;}
+  .header .comment{ color: var(--muted); font-size: 13px; letter-spacing: .3px; }
   .header h1{
-  font-size: clamp(24px, 4vw, 32px);
-  margin: 10px 0 6px 0;
-  color: var(--text);
+    font-size: clamp(24px, 4vw, 32px);
+    margin: 10px 0 6px 0;
+    color: var(--text);
   }
-  .header h1 .kw{ color: var(--keyword);}
-  .header h1 .ste{ color: var(--string);}
-  .header p{color: var(--muted); font-size: 13px;margin: 0;} 
-
-
+  .header h1 .kw{ color: var(--keyword); }
+  .header h1 .str{ color: var(--string); }
+  .header p{ color: var(--muted); font-size: 13px; margin:0; }
+ 
   .grid{
     max-width: 960px;
-    margin: o auto;
-    display: grid;
+    margin: 0 auto;
+    display:grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 28px;
   }
-
-
+ 
   /* ---------- card shell ---------- */
-.flip-card{
+  .flip-card{
     perspective: 1400px;
     height: 240px;
     opacity: 0;
@@ -109,7 +106,7 @@ html,body{
   .flip-card:focus-within .flip-inner{
     transform: rotateY(180deg);
   }
-
+ 
   .flip-face{
     position:absolute;
     inset:0;
@@ -212,4 +209,3 @@ html,body{
   .flip-card:focus-visible .glow{
     box-shadow: 0 0 0 3px var(--accent);
   }
- 
